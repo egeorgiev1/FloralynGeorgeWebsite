@@ -1,0 +1,183 @@
+.news-entry {
+  display: flex;
+  height: 117px;
+  padding: 0 1em;
+  margin-bottom: 1em;
+}
+
+/* what about on mobile?! make the image smaller??? */
+.thumbnail {
+  /* 16x9 ratio */
+  height: 100%;
+  min-height: 0; /* needed for flexbox, cuz it squishes the image */
+
+
+  /* dali tozi border opravia, rabotite, ili??? moze bi box-shadow???*/
+  /* tova na mobile layout izglezda dobre, a izvan nego??? */
+  /* ili da e sas debelina 1.5px?! */
+  border: 1px solid rgba(150, 150, 150, 0.1); 
+  /* da go izpolzvam i za drugite thumbnails?! */
+}
+
+/* tova da go napravia i za event-content, dori da
+reusena 2ta stylesheeta, moze i samia goren title
+da pushne tozi space, a samia description moze da si
+stigne do dolu, da niama margin??? */
+.news-content {
+  margin-left: 1em;
+  overflow: hidden;
+}
+
+/* ili da e prosto h3?! */
+.news-title {
+  font-size: 1.17em;
+  margin: 0.3rem 0;
+}
+
+.news-information {
+  margin: 0.3rem 0; /* i na drugi mesta rem? */
+  /* inspired from vimeo size na tezi raboti?? */
+  font-size: 0.83em;
+
+  color: rgb(175, 175, 175);
+}
+
+.news-description {
+  margin: 0.3rem 0;
+  line-height: 1.17em;
+}
+
+@-moz-document url-prefix() {
+    .news-description {
+        line-height: 1.05em;
+    }
+}
+
+/* da kaza koi neshta moze da se selectnat kato text i koi ne, images da ne
+sa tova?! ili e dobre da moze?! */
+
+@media screen and (max-width: 540px) {
+  .news-entry {
+    height: auto;
+    flex-direction: column;
+
+    /* ili da e 300px, ne 350px, moze bi sreden value, 325px??? */
+    max-width: 350px;
+  }
+
+  /* http://stackoverflow.com/questions/3029422/how-do-i-auto-resize-an-image-to-fit-a-div-container */
+  /* TOVA IZPOLZVANE I ZA SAMITE VIDEOS PRI MOBILE SIZE?! */
+  .thumbnail {
+    height: auto; /* nuzno? da vida original thumbnail stylesheet dali sadarza vsichko neobhodimo */
+    /* DA VIDA DA NIAMA LIMIT ZA SAMIA DESCRIPTION HEIGHT?! da opravia rabotata vav news-content */
+    /*    width: auto;*/
+    max-width: 100%;
+  }
+
+  .news-content {
+    margin: 0;
+  }
+
+  .news-description {
+    line-height: 1.17em; /* po-dobre se chete, da vida kolko da e po princip, da vida i izvan samia mobile rezim da go izpolzvam, da vida za vsiakakav content, da vida drugite kakvo izpolzvat? */
+  }
+}
+
+.news-publisher {
+/*  color: #0077b3;*/
+    color: rgb(236, 128, 19);
+}
+
+.news-time {}
+
+/* VREMENNO */
+.section .title {
+  text-align: center;
+}
+
+.empty-entry {
+  padding: 0 1em;
+}
+
+.empty-entry > * {
+  margin-bottom: 1em;
+}
+
+.empty-entry .no-news {
+  text-align: center;
+  color: rgb(175, 175, 175);
+}
+
+.empty-entry .news-encouragement {
+  text-align: center;
+  font-size: 1.375rem;
+/*  margin-top: 1em;*/
+}
+
+.empty-entry .newsletter-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.empty-entry .email-input {
+  font-size: 0.83em;
+
+  width: 184px;
+  padding: 0.4em 0; /* ili da go varna sas 25px height?? */
+  margin: 1rem;
+  margin-top: 0;
+  text-align: center;
+
+  border: 0;
+  border-bottom: 1px solid white;
+
+  color: white;
+  background-color: transparent;
+}
+
+.empty-entry ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgb(175, 175, 175);
+}
+.empty-entry ::-moz-placeholder { /* Firefox 19+ */
+  color: rgb(175, 175, 175);
+}
+.empty-entry :-ms-input-placeholder { /* IE 10+ */
+  color: rgb(175, 175, 175);
+}
+.empty-entry :-moz-placeholder { /* Firefox 18- */
+  color: rgb(175, 175, 175);
+}
+
+.empty-entry .sign-up {
+  font-size: 0.83em;
+
+  padding: 0.4em 1em; /* ili da go varna sas 25px height?? */
+/*  margin: 0 1rem 1rem 1rem;*/
+  border: 1px solid white;
+
+  cursor: pointer;
+  color: white;
+/*  background-color: rgb(0, 0, 0);*/
+  background-color: transparent;
+  transition: background-color 0.3s;
+}
+
+.empty-entry .sign-up:hover {
+/*  background-color: #039be5;*/
+  background-color: rgb(236, 128, 19);
+}
+
+.empty-entry .sign-up:active {
+  background-color: rgb(132, 71, 11);
+  transition-duration: 0s;
+}
+
+.news-title-hover {
+    color: white;
+    text-decoration: none;
+}
+
+.news-title-hover:hover {
+    text-decoration: underline;
+}

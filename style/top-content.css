@@ -1,0 +1,183 @@
+/* http://stackoverflow.com/questions/31713468/css-blur-filter-performance */
+/* da se namespacene sas top-content */
+.top-content {
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
+  transform: translate3d(0,0,0);
+  transform: translateZ(0);
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+    /* da sloza li edin mnogo kratak transition za samia opacity, za da e po-smooth? */
+    
+/*    filter: grayscale(1%);*/
+    
+/*    transform: rotate(30deg);*/
+    
+/*
+    animation-name: force-gpu;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+*/
+}
+
+/* using css animations makes the firefox flickering, jerking disappear. firefox flickers, because at the end of the
+transition it rerenders the element outside the gpu, basically disables the gpu acceleration */
+
+/* sas niakakav takav fix??? */
+
+/* sashto predlagat i tuka fix: https://stackoverflow.com/questions/24854640/strange-pixel-shifting-jumping-in-firefox-with-css-transitions */
+
+/* limit to firefox only, because it cause extreme blur in chrome. causes blur in firefox too, but not as extreme */
+@-moz-document url-prefix() {
+	.top-content > *, .keyframe-fix {
+        animation-name: force-gpu;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+}
+
+/* doesn't work on chrome? */
+/*
+:root {
+    --z-distance: 1px;
+}
+*/
+
+.no-overflow {
+    overflow: hidden;
+}
+
+@keyframes force-gpu {
+    0% {
+        transform: perspective(500px) translate3d(0,0,1px);
+    }
+    /* moze i bez tova 50%??? */
+    50% {
+        transform: perspective(500px) translate3d(0,0,1px);
+    }
+    
+    100% {
+        transform: perspective(500px) translate3d(0,0,1px);
+    }
+}
+
+.top-content.clear {
+    opacity: 1;
+}
+
+.top-content.blurred {
+/*    display: none;*/
+    opacity: 0;
+}
+
+/* tezi da se mahnat?? */
+.top-content .album-image {
+    box-shadow: none;
+}
+
+.bg-image.scroll-fade-in {
+/*    filter: blur(10px);*/
+}
+
+/* moze sas object-fit, moze i sas background property za samia fitting??? */
+/* http://stackoverflow.com/questions/14562457/center-oversized-image-in-div */
+.bg-image {
+  position: absolute;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
+
+  max-height: 110%;
+
+/*  filter: brightness(30%);*/
+}
+
+.top-content .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* opravia pixel jerkinga na samite letters pri scrolling i tem podobni */
+.perspective-fix {
+    transform: perspective(500px);
+}
+
+.top-content .title {
+  font-size: 2.5em;
+  margin: 0.57em 0;
+    text-align: center;
+}
+
+.tickets-button-link {
+    display: flex;
+    text-decoration: none;
+}
+
+.tickets-button {
+  display: flex;
+  align-items: center;
+  padding: 0.4em 0.5em;
+  margin-top: 1.5em;
+  
+  border: 2px solid white;
+  border-radius: 4px; /* dali da go ima? */
+  background-color: transparent; /* dali tova? sinio? */
+  color: white;
+}
+
+.tickets-button:hover {
+  cursor: pointer;
+  background-color: rgba(150, 150, 150, 0.3);
+}
+
+.tickets-button:active {
+  background-color: rgba(50, 50, 50, 0.3);
+}
+
+.tickets-button .label {
+  margin-left: 0.45rem;
+  font-size: 1.2em;
+
+  display: flex;
+  align-items: center;
+}
+
+.top-content .down-arrow {
+  position: relative;
+  margin-top: auto;
+  color: white;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 1) 100%);
+}
+
+.bg-image.bigger {
+  max-height: 130%;
+}

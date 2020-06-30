@@ -1,0 +1,76 @@
+/* tova ne e za layout, a za styles. ot Spotify */
+body {
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+/* ili da bade a:hover > *, no togava moze da ne hvane opredeleni sluchai? */
+a:hover * {
+  cursor: pointer;
+}
+
+.row-layout {
+  display: flex;
+  flex-direction: row;
+  align-content: center; /* only for multiline flex row*/
+  /* ako e napraveno pravilno niama da ima nuzda
+  vav povecheto sluchai ot self-align? */
+  justify-content: center;
+  align-items: center; /* moze i align po baseline, zavisi */
+}
+
+.column-layout {
+  display: flex;
+  flex-direction: column;
+  align-content: center; /* only for multicolumn flex col?*/
+  justify-content: center;
+  align-items: center;
+}
+
+.stacked-layout {
+  display: block;
+  position: relative;
+  height: 100%;
+  width: 100%;
+/*  overflow: hidden;*/
+}
+
+.stacked-layout > * { /* preimenuvane na stack layout??? */
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+/*  overflow: hidden;*/
+}
+
+.screen-sized {
+/*  http://stackoverflow.com/questions/23367345/100vw-causing-horizontal-overflow-but-only-if-more-than-one*/
+  height: 100vh;
+  width: 100vw; /* predpolagam, che tova ne mi triabva vav povecheto sluchai? */
+  max-width:100%;
+}
+
+.fill-parent { /* da go probvam */
+  height: 100%;
+  width: 100%;
+}
+
+/* dali taka? */
+.content {
+  font-size: 1em;
+  box-sizing: border-box; /* na vsichko da go sloza? */
+  padding: 1em;
+}
+
+.content {
+  /* https://css-tricks.com/confused-rem-em/ */
+  /*font-size: 100%;*/ /* moze tuka vh i vw da se izpolzvat */
+}
+
+/* https://www.quora.com/Why-do-the-default-margins-on-HTML-headers-increase-from-h1-to-h6 */
+/* mai che ideiata na tozi padding e samia padding vav 'rem' units da e 1em pri font-size 100% na samia body tag??? */
+h1              { font-size: 2em; margin: 0.67em 0; }
+h2              { font-size: 1.5em; margin: 0.75em 0; }
+h3              { font-size: 1.17em; margin: 0.83em 0; }
+h4              { margin: 1.12em 0; }
+h5              { font-size: .83em; margin: 1.5em 0; }
+h6              { font-size: .75em; margin: 1.67em 0; }

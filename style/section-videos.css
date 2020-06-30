@@ -1,0 +1,146 @@
+/* zaradi tova samite videos ne fitvat samia content */
+.video-entries {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+
+.video-entry {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1em 1em 1em;
+    max-width: 208px;
+    color: white;
+    text-decoration: none;
+}
+
+.video-thumbnail-container {
+  position: relative; /* nuzno? */
+  /*  height: 117px;*/
+  /* po-skoro max-width da go napravia??? */
+  /*  max-width: 208px;*/
+  /* da zakragla na 208, ili? da ne se poluchi height drobno chislo? */
+}
+
+.video-thumbnail-new {
+  /*  height: 117px;*/
+  /*  width: 208px;*/
+  width: 100%;
+
+  border-radius: 3px; /* nuzno??? */
+  display: block;
+
+  margin: 0;
+  padding: 0;
+  transition: 0.3s;
+}
+
+.video-thumbnail-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+/*  background-color: rgba(255, 0, 0, 0.2);*/
+  background-color: rgba(132, 71, 11, 0.4);
+  transition: 0.3s;
+}
+
+.fa.thumbnail-icon {
+  text-shadow: 0px 0px 10px #000000;
+  transform: scale(1.7, 1.7);
+  /*  http://stackoverflow.com/questions/12980153/image-moves-on-hover-chrome-opacity-issue*/
+  backface-visibility: hidden; /* pak ima niakakav lek vertical movement */
+  transition: 0.3s;
+}
+
+/* 2px border, moze bi dori i font weight da e bold, da vida kak e pri samia event date vav cornera */
+.video-thumbnail-length {
+  position: absolute;
+  bottom: 0.5em;
+  right: 0.5em;
+  color: white;
+  border: 1px solid white;
+  border-radius: 3px;
+  padding: 0.2em;
+  /* by removing the padding there's some small space under the text, probably for underlining. is it platform dependent, font dependent or??? how to remove bez niakakvi wrappers, negative margins etc.?! da dobavia malko extra padding?!*/
+  /* eto reshenie: http://caniuse.com/#feat=calc */
+  padding-bottom: calc(0.2em - 1px);
+
+  transition: 0.3s;
+}
+
+.video-thumbnail-container:hover .video-thumbnail-length {
+  filter: blur(1px);
+}
+
+.video-thumbnail-container:hover .fa.thumbnail-icon {
+  transform: scale(2, 2);
+}
+
+.video-thumbnail-container:active .fa.thumbnail-icon {
+  transition: 0.1s;
+  transform: scale(1.7, 1.7);
+}
+
+.video-thumbnail-container:hover .video-thumbnail-overlay {
+/*  background-color: rgba(255, 0, 0, 0.5);*/
+  background-color: rgba(132, 71, 11, 0.65);
+}
+
+.video-thumbnail-container:active .video-thumbnail-overlay {
+/*  background-color: rgba(150, 0, 0, 0.5);*/
+  background-color: rgba(132, 71, 11, 0.55)
+}
+
+.video-thumbnail-container:hover .video-thumbnail-new {
+  filter: blur(1px);
+}
+
+.video-thumbnail-container:hover {
+  cursor: pointer; /* to remove */
+}
+
+/* neshto 0.3rem ne raboti kakto triabva tuka, da vida 0.2 za news??? */
+.video-title {
+  margin-top: 0.2rem;
+  font-size: 1.17em;
+}
+
+.video-info {
+  color: dimgray;
+  color: rgb(175, 175, 175);
+  margin-top: 0.2rem; /* zaradi font-size experimenta tuka */
+  /* inspired from vimeo size na tezi raboti?? */
+  font-size: 0.83em;
+}
+
+.video-views {}
+.video-time {}
+.video-entry {}
+
+.video-entry.empty {
+  padding-bottom: 0;
+  width: 208px;
+}
+
+/* da vida i za samite news-entries pak tolkova malki i dori po-malki media queries?! */
+@media screen and (max-width: 540px) {
+  .video-entry {
+    max-width: 350px;
+  }
+
+  /* taka che da moze da se sviva i pod 208px width */
+  /* tova niama da mi e nuzno tuka ako sloza nested img vav elementa?! */
+  .video-entry.empty { /* flex column da si go varna da fixne problema??? */
+    width: 100%; /* force them to wrap to the next line */
+    padding: 0;
+  }
+}

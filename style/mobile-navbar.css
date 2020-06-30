@@ -1,0 +1,158 @@
+/**
+This file was automatically generated from mobile-navbar.less on Tue Apr 25 2017 05:19:49 GMT+0100 (GMT Daylight Time). If you need to make changes, edit mobile-navbar.less directly instead of this file.
+**/
+
+/* colors defined here */
+/* a niakakvi mixins??? */
+.mobile-navbar {
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  /* animate icon from this to close icon?! da vida morph icons */
+  /* scrolling na samoto menu vav landscape mode?!, dostatuchno space?! */
+  /* maybe have a box shadow?! */
+  /* general form styling da izmisla, reusable, ili??? */
+}
+@media screen and (max-width: 540px), screen and (max-height: 480px) {
+  .mobile-navbar {
+    visibility: visible;
+  }
+}
+.mobile-navbar .navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+}
+.mobile-navbar .logo {
+  margin-right: auto;
+  padding: 1em;
+  /* po-skoro za links da si ima specialen stylesheet, ili?! */
+  text-decoration: none;
+  color: white;
+  transition: background-color 0.3s;
+}
+.mobile-navbar .logo:active {
+  background-color: rgba(130, 130, 130, 0.3);
+  transition-duration: 0s;
+}
+.mobile-navbar .selected {
+  padding: 1em;
+}
+.mobile-navbar .fa.menu-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  width: 3rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+.mobile-navbar .fa.menu-icon:active {
+  background-color: #282828;
+  transition-duration: 0s;
+}
+.mobile-navbar .menu {
+  display: block;
+  visibility: hidden;
+  overflow: scroll;
+  background-color: black;
+  transition: height 0.5s;
+}
+.mobile-navbar .social-icons {
+  display: flex;
+  justify-content: center;
+  padding: 1em 0em;
+  padding-top: 0;
+}
+.mobile-navbar .fa.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0em 0.5em;
+  /* make them bigger for mobile?! da uvelicha i togava samia margin mezdu tiah?! */
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  text-decoration: none;
+  background-color: #969696;
+  color: black;
+  transition: background-color 0.3s;
+}
+.mobile-navbar .fa.social-icon:active {
+  /*      background-color: #025e8d;*/
+  background-color: #84470b;
+  transition-duration: 0s;
+}
+.mobile-navbar .menu-item {
+  display: flex;
+  justify-content: center;
+  padding: 1em 0em;
+  text-decoration: none;
+  color: white;
+  transition: background-color 0.3s;
+}
+.mobile-navbar .menu-item:active {
+  background-color: rgba(130, 130, 130, 0.3);
+  transition-duration: 0s;
+  /* global da go napravia tova sas transition-duration, ne navsiakade da go povtariam??? sashto i za samia normalen transition duration da e variable ili??? */
+}
+.mobile-navbar .newsletter-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mobile-navbar .email-input {
+  font-size: 0.83em;
+  width: 184px;
+  padding: 0.4em 0;
+  /* ili da go varna sas 25px height?? */
+  margin: 1rem;
+  text-align: center;
+  border: 0;
+  border-bottom: 1px solid gray;
+  color: white;
+  background-color: transparent;
+}
+.mobile-navbar .sign-up {
+  font-size: 0.83em;
+  padding: 0.4em 1em;
+  /* ili da go varna sas 25px height?? */
+  margin: 0 1rem 1rem 1rem;
+  border: 1px solid white;
+  cursor: pointer;
+  color: white;
+  background-color: #000000;
+  transition: background-color 0.3s;
+}
+.mobile-navbar .sign-up:hover {
+  /*      background-color: #039be5;*/
+  background-color: #ec8013;
+}
+.mobile-navbar .sign-up:active {
+  /*      background-color: #025e8d;*/
+  background-color: #84470b;
+  transition-duration: 0s;
+}
+.mobile-navbar .navbar-logo-container {
+  margin-right: auto;
+}
+@media screen and (max-width: 375px) {
+  .mobile-navbar .selected {
+    display: none;
+  }
+}
+.mobile-navbar .social-icons {
+  display: flex;
+  flex-wrap: wrap;
+}
+.mobile-navbar .social-icons-row {
+  display: flex;
+}
+.mobile-navbar .social-icons-row {
+  margin-top: 1rem;
+}

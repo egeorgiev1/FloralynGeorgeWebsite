@@ -1,0 +1,194 @@
+/* preimenuvane stacked-layout na stack-layout */
+/* da go namespacena tozi css i sashto i samia script kakto vav album-table??? */
+
+.carousel .items {
+  display: flex;
+  flex-direction: row;
+}
+
+.carousel .items > *:nth-child(1) {
+  /* po-dobar easing function??? */
+  transition: margin-left 0.5s ease 0s;
+}
+
+.carousel .items > * {
+  /*  left: 0;  can't animate from auto: http://stackoverflow.com/questions/21125587/css3-transition-not-working-in-chrome-anymore */
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* http://stackoverflow.com/questions/14562457/center-oversized-image-in-div */
+/* could do with div and flexbox, but this makes the hierarchy simpler */
+/* da vida i po-simple variant??? da se razrovcha i vav samia stackoverflow answer */
+/* a ako samia image stane po-malak ot samia container, da se stretchne?! kak da se handlene?! */
+/* moze i vingi ednoto izmerenie da overloadva, overflowva, a drugoto da fitva samia container???*/
+/* inache moze i taka da se centrira? : transform: translate(-50%, -50%); */
+
+/* http://stackoverflow.com/questions/19776670/how-to-emulate-background-size-cover-on-img
+answera na Vladko */
+
+/* da vida i sas flexbox?! */
+.carousel .background { /* da ne sam propusnal position: absolute??? */
+  
+  height: 100vh;
+  position: absolute;
+/*  min-height: 110%;*/
+  width: auto;
+  
+  margin: auto;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  
+  /*object-fit: cover;*/  /* emulate that? ili da go nakaram gornoto da se izpolzva samo vav Edge, a object-fit pri vsichki ostanali sluchai?! */
+  /*moze i prosto dostatuchno golam width da ima samia image, za da ne moze da izleze ot ekrana na koito i da e aspect ratio, a ako pak ne e dostatuchen da ima background color zad nego?! da ia vida taia rabota*/
+}
+
+.carousel .overlay {
+  background-color: rgba(0, 0, 0, 0.7); /* moze i da e gradient */
+}
+
+.carousel .item-content {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+    /* tova opravia perspective buga vav samia music page pri rotationa, sashto i jerkinga na samite letters i images pri scrollinga */
+    transform: perspective(500px);
+}
+
+.carousel .carousel-controls {
+  pointer-events: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  /* https://www.w3schools.com/css/css3_shadows.asp */
+  text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4), 0px 6px 20px rgba(0, 0, 0, 0.38);
+}
+
+.carousel .middle-controls {
+  pointer-events: all;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 0;
+/*  height: 100%;*/
+}
+
+.carousel .left-arrow, .carousel .right-arrow {
+  pointer-events: all;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.carousel .left-arrow.disabled-arrow, .carousel .right-arrow.disabled-arrow {
+  cursor: default;
+  opacity: 0.2;
+}
+
+.carousel .control-left, .carousel .control-right {
+  pointer-events: all;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.carousel .control-left.disabled-arrow, .carousel .control-right.disabled-arrow {
+  cursor: default;
+  opacity: 0.2;
+}
+
+
+.carousel .carousel-buttons {
+  margin-top: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.carousel .carousel-option {
+  margin: 0px 5px;
+  cursor: pointer;
+}
+
+.carousel .carousel-option.fa-circle {
+  cursor: default;
+}
+
+
+.carousel .background-container {
+  box-shadow: 0 0 8px 8px white inset;
+  height: 100%;
+  background: transparent;
+}
+
+
+/* VREMENEN KOD */
+/*
+.album-image-top {
+    transition: 0.5s;
+}
+
+.album-image-top-left {
+    transform: perspective(500px) rotate3d(0, 1, 0, 60deg) translate(-150px, 0) scale(0.7, 0.7)
+}
+
+.album-image-top-right {
+    transform: perspective(500px) rotate3d(0, 1, 0, -60deg) translate(150px, 0) scale(0.7, 0.7)
+}*/
+
+
+/* https://stackoverflow.com/questions/16962475/google-chrome-css-transition-bug-perspective-behaving-strangely */
+/* a zashto na chrome e pixelated zaradi samia perspective??? */
+.album-cover {
+    transition: 0.5s;
+    /* predizvikva pixelated image vav chrome */
+    transform: perspective(500px);
+    /* https://stackoverflow.com/questions/9235342/3d-css-transform-jagged-edges-in-firefox */
+    /* why does this work, wtf?! */
+    outline: 1px solid transparent;
+    opacity: 1;
+}
+
+.album-cover.left {
+    transform: perspective(500px) rotate3d(0, 1, 0, 60deg) translate(-150px, 0) scale(0.7, 0.7);
+    opacity: 0;
+}
+
+.album-cover.right {
+    transform: perspective(500px) rotate3d(0, 1, 0, -60deg) translate(150px, 0) scale(0.7, 0.7);
+    opacity: 0;
+}
+
+.carousel-background {
+    transition: 0.5s;
+    opacity: 1;
+}
+
+.carousel-background.left {
+    opacity: 0;
+}
+
+.carousel-background.right {
+    opacity: 0;
+}
+
+.album-controls {
+    transition: 0.5s;
+    opacity: 1;
+}
+
+.album-controls.left {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.album-controls.right {
+    opacity: 0;
+    pointer-events: none;
+}

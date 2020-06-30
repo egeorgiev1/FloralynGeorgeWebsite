@@ -1,0 +1,31 @@
+.bg-black {
+  background-color: black;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.font-red {
+  font-color: red;
+}
+
+.font-green {
+  font-color: green;
+}
+
+.font-blue {
+  font-color: blue;
+}
+
+.semi-transparent {
+  opacity: 0.5;
+}

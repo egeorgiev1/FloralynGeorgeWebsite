@@ -1,0 +1,314 @@
+.content-actions {
+  display: flex;
+}
+
+/* otslabvane na samia shadow??? */
+.transparent-button {
+  display: flex;
+  align-items: center;
+  padding: 0.4em 0.5em;
+  margin-top: 1.5em;
+
+  border: 2px solid white;
+  border-radius: 4px; /* dali da go ima? */
+  background-color: transparent; /* dali tova? sinio? */
+  color: white;
+  
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.49);
+  /* text shadow??? */
+}
+
+.transparent-button:hover {
+  cursor: pointer;
+  background-color: rgba(150, 150, 150, 0.3);
+}
+
+.transparent-button:active {
+  background-color: rgba(50, 50, 50, 0.3);
+}
+
+.transparent-button .label {
+  margin-left: 0.45rem;
+  font-size: 1.2em;
+
+  display: flex;
+  align-items: center;
+}
+
+.transparent-button.play-button {
+/*
+  border-color: hsl(120, 100%, 70%);;
+  color: hsl(120, 100%, 70%);
+*/
+/*  background-color: hsla(120, 50%, 50%, 0.2);*/
+}
+
+.transparent-button.play-button:hover {
+/*  background-color: hsla(120, 50%, 50%, 0.5);*/
+}
+
+.transparent-button.play-button:active {
+/*  background-color: hsla(120, 50%, 50%, 0.2);*/
+}
+
+.transparent-button.buy-button {
+  margin-left: 1em;
+  
+/*
+  border-color: hsl(60, 100%, 70%);
+  color: hsl(60, 100%, 70%);
+*/
+/*  background-color: hsla(60, 50%, 50%, 0.2);*/
+  background-color: rgba(236, 128, 19, 0.3);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.49);
+}
+
+.transparent-button.buy-button:hover {
+/*  background-color: hsla(60, 50%, 50%, 0.5);*/
+  background-color: rgba(236, 128, 19, 0.6);
+}
+
+.transparent-button.buy-button:active {
+  /*  background-color: hsla(60, 50%, 50%, 0.2);*/
+  background-color: rgba(236, 128, 19, 0.3);
+}
+
+.album-image {
+  height: 200px;
+  width: 200px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.49);
+}
+
+/* http://stackoverflow.com/questions/31713468/css-blur-filter-performance */
+.top-content .bg-image {
+  /* vmesto tezi neka se izpolzvat veche filtered images!!! */
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
+  transform: translate3d(0,0,0);
+  transform: translateZ(0);
+  
+/*  filter: brightness(30%) blur(10px); */
+}
+
+.album-name {
+  margin-top: 1rem;
+  font-size: 1.375em;
+}
+
+.content-message {
+/*  margin-top: 1em;*/
+  margin-top: 0.3rem;
+  font-size: 1.125em;
+}
+
+/* fix samiia overflow??? */
+.main-content {
+/*  background-color: red;*/
+/*  display: block;*/
+/*  width: 100%;*/
+}
+
+/* DA PREMAHNA DOLNIA BORDER VAV MOBILE MODE */
+/* da centriram rabotite vav mobile mode, da mahna float, a za samia box shadow
+na samia album? cvetovete??? */
+/* dropdowna */
+.section.album-section {
+  display: block;
+}
+
+/* a da se slozat vav section,
+koito da collapsene vav mobile mode??? */
+.main-content .album-image {
+  float: left;
+  margin-right: 0.5rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.main-content .album-info {
+  margin: 1em;
+  margin-top: 0;
+  margin-bottom: 0;
+  
+  min-height: calc(200px + 1em);
+}
+
+.main-content .album-name {
+  margin: 0;
+  padding-top: 1.3rem;
+}
+
+.main-content .album-details {
+  font-size: 0.8333em;
+  color: rgb(175, 175, 175);
+/*  margin-top: 0.3rem;*/
+}
+
+.main-content .album-description {
+  margin-top: 0.3rem;
+/*  line-height: 1.14rem;*/
+  line-height: 24px;
+  line-height: 25px;
+}
+
+/* Main stylesheet */
+table.songs-list {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  color: white;
+  
+  margin-top: 1em;
+}
+
+table.songs-list tr {
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+
+@media screen and (max-width: 540px) {
+  
+  .main-content .album-image { 
+    float: none;
+    margin-bottom: 0;
+  }
+  
+  .section.album-section {
+    text-align: center;
+  }
+  
+  .main-content .album-info {
+    margin-top: 0;
+  }
+  
+  .main-content .album-description {
+    margin-top: 1em;
+    text-align: left;
+  }
+  
+/*
+  table.songs-list tr:last-child {
+    border-bottom: none;
+  }
+*/
+}
+
+table.songs-list tr:hover{
+  background-color: rgb(40, 40, 40);
+}
+
+table.songs-list td, table.songs-list th {
+  padding: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: rgb(180, 180, 180);
+}
+
+/* Song numbering */
+table.songs-list td:nth-child(1) {
+  width: 20px;
+  text-align: right;
+}
+
+/* Song name */
+table.songs-list td:nth-child(2) {
+  width: auto;
+  text-align: left;
+  color: white;
+/*  white-space: nowrap;*/
+}
+
+/* Song genre */
+table.songs-list td:nth-child(3) {
+/*  width: 70px;*/
+  display: none; /* VREMENNO DA NIAMA GENRES?! */
+  text-align: left;
+}
+
+@media screen and (max-width: 450px) {
+  table.songs-list td:nth-child(3) {
+/*    width: auto;*/
+    width: 0;
+  }
+}
+
+/* Song duration */
+table.songs-list td:nth-child(4) {
+  width: 60px;
+  text-align: right;
+}
+
+@media screen and (max-width: 350px) {
+  table.songs-list td:nth-child(4) {
+    width: 0;
+  }
+}
+
+/* Song play button */
+table.songs-list td:nth-child(5) {
+  width: 40px;
+  text-align: center;
+}
+
+button.play {
+  padding: 8px 8px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+}
+
+button.play:hover {
+  background-color: white;
+  color: black;
+  transition: 0.3s;
+}
+
+button.play:active {
+  background-color: gray;
+  border-color: gray;
+  transition: 0s;
+}
+
+button.play i {
+  position: relative;
+  left: 1px;
+}
+
+
+.button-link {
+  text-decoration: none;
+}
+
+.album-description * {
+  display: inline;
+}
+
+.album-description a {
+  color: rgb(236, 128, 19);
+  text-decoration: none;
+}
+
+.buy-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1em;
+    color: white;
+    text-decoration: none;
+}
+
+.buy-link:hover {
+    color: rgb(236, 128, 19);
+}
+
+.buy-link:active {
+    color: rgb(132, 71, 11);
+}

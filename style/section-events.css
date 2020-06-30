@@ -1,0 +1,221 @@
+.event-entry {
+  padding: 1em;
+  padding-top: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.event-thumbnail {
+  position: relative;
+}
+
+/* border size, font-size i t.n. da sravnia sas video length?! */
+.event-thumbnail-date-container {
+  /*  font-size: 0.9em;*/
+  height: 30px;
+  width: 30px;
+  line-height: 15px;
+  position: absolute; /* for stacking */
+  z-index: 1;
+  text-align: center;
+
+  border: 2px solid white;
+  border-radius: 4px;
+  padding: 0.2em;
+
+  /*  box-sizing: border-box;*/
+  /* a zashto ne prosto left i top, ne sas margin? */
+  margin-left: 0.5em;
+  margin-top: 0.5em;
+  color: white;
+}
+
+.event-thumbnail-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  
+  /* moze i greenish i t.n., zavisi ot event image?! */
+/*  background-color: rgba(75, 0, 30, 0.5);*/
+  
+}
+
+.event-thumbnail-month {
+  font-size: 0.7em;
+  font-weight: bold;
+}
+
+.event-thumbnail-date {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.event-thumbnail-image {
+  height: 117px;
+  width: 208px;
+
+  border-radius: 3px;
+  display: block;
+}
+
+.event-content {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1em;
+  max-height: 117px; /* a bez tova da moze? */
+
+  /* inache niama da pozvoli da se svie do krai */
+  min-width: 0;
+}
+
+.event-title {
+  margin-top: 0.3rem;
+  font-size: 1.17em;
+}
+
+.event-time {
+  color: dimgray;
+  color: rgb(175, 175, 175);
+  margin-top: 0.2rem; /* zaradi font-size experimenta tuka */
+  /* inspired from vimeo size na tezi raboti?? */
+  font-size: 0.83em;
+}
+
+.event-location {
+  color: dimgray;
+  color: rgb(175, 175, 175);
+  margin-top: 0.2rem; /* zaradi font-size experimenta tuka */
+  /* inspired from vimeo size na tezi raboti?? */
+  font-size: 0.83em;
+}
+
+/* http://stackoverflow.com/questions/6222616/with-css-use-for-overflowed-block-of-multi-lines?rq=1 */
+.event-description {
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+  /* ne e dobre kato overflowne obache text, da vida do kolko characters da limitvam samite descriptions */
+  overflow: hidden;
+}
+
+/* samia hover background-color da e consistent sas na ostanalite buttons, ili?! */
+
+.get-tickets-link {
+    display: flex;
+    margin-left: auto;
+    text-decoration: none;
+}
+
+.get-tickets {
+  display: flex;
+  flex-direction: column;
+  /* http://codepen.io/noahblon/post/practical-guide-to-flexbox-dont-forget-about-flex-shrink */
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  margin-left: auto;
+
+  height: 90px;
+  width: 90px;
+
+  color: white;
+  background: none;
+  border-radius: 50%;
+  border: 2px solid white;
+
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.get-tickets:hover {
+/*  background-color: #039be5;*/
+  background-color: rgb(236, 128, 19);
+}
+
+.get-tickets:active {
+  transition-duration: 0s;
+/*  background-color: #025e8d;*/
+  background-color: rgb(132, 71, 11);
+}
+
+.ticket-button-text {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 540px) {
+  .event-thumbnail-image {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+  }
+
+  .event-content {
+    margin: 0;
+    max-height: none;
+  }
+
+  .event-title {
+    /* otgore i otdolu samia space da e edin i sasht, taka i pri drugite entries?! */
+    margin-top: 0.8rem;
+  }
+
+  /* scrollable za telefon?! */
+  .event-description {
+    margin-bottom: 0;
+  }
+
+  .event-entry {
+    flex-direction: column;
+
+    max-width: 350px;
+  }
+
+    .get-tickets-link {
+        width: 100%;
+    }
+  .get-tickets {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    padding: 0.5em;
+    margin-top: 0.8rem;
+    border-radius: 2px;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+  .get-tickets > * {
+    margin-left: 0.2em;
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  /* old chrome fix, maybe safari */
+  .get-tickets > :first-child {
+    margin-left: auto;
+  }
+  .get-tickets > :last-child {
+    margin-right: auto;
+  }
+}
+
+.bg-image {
+/*  filter: brightness(40%);*/
+}
+
+
+.uk-description * {
+  display: inline;
+}
+
+.uk-description a {
+  color: rgb(236, 128, 19);
+  text-decoration: none;
+}

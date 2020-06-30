@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<content>
+    <!-- dannite ot page descriptors ne sa samo za samite pages, a promeniat i samia carousel, vnimavai -->
+    <page-descriptors>
+        <videos>
+            <top-content>
+                <image>when-light-falls-asleep-background-dark-fixed.jpg</image>
+                <image-blurred>when-light-falls-asleep-background-dark-fixed-blurred.jpg</image-blurred>
+                <title>When Light Falls Asleep&lt;br&gt;(Official Video)</title>
+                <details>New Music Video</details>
+                <video-link>https://www.youtube.com/watch?v=cQmXL-HvVBQ</video-link>
+            </top-content>
+            <section-title>Music Videos</section-title>
+        </videos>
+
+        <shows>
+            <top-content>
+                <image>london-tour-black.jpg</image>
+                <image-blurred>london-tour-black-blurred.jpg</image-blurred>
+                <title>UK Tour</title>
+                <details>Tickets Available Now</details>
+            </top-content>
+            <section-title>Upcoming Events</section-title>
+            <section-description>&lt;span style="display: block; text-align: center;"&gt; For free and other events available at &lt;a href="https://www.facebook.com/pg/floralyngeorge/events/"&gt;https://www.facebook.com/pg/floralyngeorge/events/&lt;a&gt;&lt;span&gt;</section-description>
+        </shows>
+    </page-descriptors>
+
+    <albums>
+        <album>
+            <top-content>
+                <details>Out Now</details>
+                <play-button>Play Now</play-button>
+                <buy-button>Buy Now</buy-button>
+                <background-image>album-image-blurred.jpg</background-image>
+
+                <play-link>music.php#play</play-link>
+                <buy-link>music.php#buy</buy-link>
+            </top-content>
+
+            <title>When Light Falls Asleep</title>
+            <image>album-image.jpg</image>
+            <length>18</length>
+            <description>"When light falls asleep" is Floralyn George’s Debut EP which is a signature of her unique sound intertwined the exceptional range and dynamics of her voice with an enchanting tone of her harp playing lays down on the diverse texture of pop-rock, electro, dance and ambient. Her classical background contributes to the complexity and diversity of the music. In collaboration with producer Joshua Palk, the sound was purposely searched and developed in a joint creative process and it is described by fans as atmospheric melodic electro. All these various “spices” create a lush sound which rediscovers the development of the modern music. Floralyn's lyrics are inspired by the mystery of darkness which devours the light to create a space where the only survivals are the ones who seek love with their senses rather than with their eyes. Only then they will find pure love.</description>
+
+            <songs>
+                <song>
+                    <name>The Burning Sea</name>
+                    <length>4:16</length>
+                    <link>https://floralyngeorge.bandcamp.com/track/the-burning-sea</link>
+                </song>
+                <song>
+                    <name>Won't be back (LUNA)</name>
+                    <length>5:10</length>
+                    <link>https://floralyngeorge.bandcamp.com/track/wont-be-back-luna</link>
+                </song>
+                <song>
+                    <name>When Light Falls Asleep</name>
+                    <length>4:11</length>
+                    <link>https://floralyngeorge.bandcamp.com/track/when-light-falls-asleep</link>
+                </song>
+                <song>
+                    <name>The Burning Sea (Live Session)</name>
+                    <length>4:53</length>
+                    <link>https://soundcloud.com/floralyngeorge/the-burning-sea-live-session</link>
+                </song>
+            </songs>
+
+            <purchase-label>Play and order on the following websites:</purchase-label>
+
+            <purchase-links>
+              <purchase-link>
+                  <icon>fa-bandcamp</icon>
+                  <title>Bandcamp</title>
+                  <warning>(Physical Copy)</warning>
+                  <link>https://floralyngeorge.bandcamp.com/album/when-light-falls-asleep</link>
+              </purchase-link>
+                <purchase-link>
+                    <icon>fa-apple</icon>
+                    <title>iTunes</title>
+                    <warning></warning>
+                    <link>https://itunes.apple.com/gb/album/when-light-falls-asleep-ep/id1254531158</link>
+                </purchase-link>
+                <purchase-link>
+                    <icon>fa-spotify</icon>
+                    <title>Spotify</title>
+                    <warning></warning>
+                    <link>http://bit.ly/2u9PWI0</link>
+                </purchase-link>
+                <purchase-link>
+                    <icon>fa-amazon</icon>
+                    <title>Amazon</title>
+                    <warning></warning>
+                    <link>http://amzn.to/2eYeUrR</link>
+                </purchase-link>
+                <purchase-link>
+                    <icon>fa-play</icon>
+                    <title>Google Play</title>
+                    <warning></warning>
+                    <link>http://bit.ly/2vVQQtC</link>
+                </purchase-link>
+            </purchase-links>
+
+        </album>
+    </albums>
+
+    <shows>
+        <entry>
+            <name>Newbury Concert</name>
+            <thumbnail-name>arlington-arts-centre-small-2.jpg</thumbnail-name>
+            <month>SEP</month>
+            <day>07</day>
+            <date-text>September 7th at 19:00PM</date-text>
+            <location>Arlington Arts Centre, Newbury</location>
+            <description>Concert supporting the Macmillan Cancer Support.</description>
+            <tickets-link>https://arlingtonarts.ticketsolve.com/shows/873575827</tickets-link>
+        </entry>
+        <entry>
+            <name>Swindon Concert</name>
+            <thumbnail-name>swindon-arts-centre-small.jpg</thumbnail-name>
+            <month>SEP</month>
+            <day>06</day>
+            <date-text>September 6th at 19:30PM</date-text>
+            <location>Swindon Arts Centre, Swindon</location>
+            <description>Special concert raising funds for the British Heart Foundation.</description>
+            <tickets-link>https://swindontheatres.co.uk/Online/tickets-floralyn-george-swindon-2017#BookTickets</tickets-link>
+        </entry>
+        <entry>
+            <name>Bristol Concert</name>
+            <thumbnail-name>thekla.jpg</thumbnail-name>
+            <month>SEP</month>
+            <day>02</day>
+            <date-text>September 2nd at 19:00PM</date-text>
+            <location>Thekla, Bristol</location>
+            <description>Special concert supporting the Macmillan Cancer Support.</description>
+            <tickets-link>http://www.alttickets.com/floralyn-george-tickets</tickets-link>
+        </entry>
+        <entry>
+            <name>Oxford Concert</name>
+            <thumbnail-name>o2-academy-black-2.jpg</thumbnail-name>
+            <month>SEP</month>
+            <day>01</day>
+            <date-text>September 1st at 19:00PM</date-text>
+            <location>O2 Academy, Oxford</location>
+            <description>Concert raising funds for the Macmillan Cancer Support.</description>
+            <tickets-link>http://www.ticketmaster.co.uk/event/1F0052CFBE0CE187?brand=o2academyoxford&amp;camefrom=CFC_AMG_OXFORD_wlfa</tickets-link>
+        </entry>
+    </shows>
+
+    <videos>
+        <entry>
+            <name>Floralyn George - When Light Falls Asleep (Official Video)</name>
+            <thumbnail-name>when-light-falls-asleep-video.jpg</thumbnail-name>
+            <length-text>4:44</length-text>
+            <date-text>Aug 28th, 2017</date-text>
+            <video-link>https://www.youtube.com/watch?v=cQmXL-HvVBQ</video-link>
+        </entry>
+        <entry>
+            <name>Floralyn George - The Burning Sea (Live Session)</name>
+            <thumbnail-name>video-image-small.jpg</thumbnail-name>
+            <length-text>4:54</length-text>
+            <date-text>July 31st, 2017</date-text>
+            <video-link>https://www.youtube.com/watch?v=m5WsJ2Hu8SE</video-link>
+        </entry>
+    </videos>
+
+    <news>
+      <entry>
+          <title>Falmouth Is All Cornwall Has Left For Live Music, Who’s Worth Seeing?</title>
+          <thumbnail-name>floralyn george falmouth 2.jpg</thumbnail-name>
+          <company>CLUNK</company>
+          <author>Sam Lawson and Kieran Webber</author>
+          <description>I think most people generally have the same reaction that I did when they see someone come on stage with a harp, it’s almost always “oh wow look at that it’s a harp”.</description>
+          <news-link>https://clunkmag.com/2017/10/24/falmouth-is-all-cornwall-has-left-for-live-music-whos-worth-seeing/</news-link>
+      </entry>
+      <entry>
+          <title>Watch Floralyn George’s enchanting mountain-side performance of ‘When Light Falls Asleep’</title>
+          <thumbnail-name>Floralyn Music Crowns 2.png</thumbnail-name>
+          <company>Music Crowns</company>
+          <author>James Cookie</author>
+          <description>Floralyn George has shared her captivating mountain-side rendition of her original track, ‘When Light Falls Asleep‘.</description>
+          <news-link>https://www.musiccrowns.org/emerging-talent/watch-floralyn-georges-enchanting-mountain-side-performance-light-falls-asleep/</news-link>
+      </entry>
+        <entry>
+            <title>Model student Floralyn George has many strings to her bow</title>
+            <thumbnail-name>oxford-mail-logo.jpg</thumbnail-name>
+            <company>Oxford Mail</company>
+            <author>Tim Hughes</author>
+            <description>THERE is no one quite like Floralyn George. A singer and virtuoso musician, the talented 21 year-old Bulgarian is a graduate of one of Europe's great music schools, has spent a year in China playing in the world's biggest casino and has a successful career as a model.</description>
+            <news-link>http://www.oxfordmail.co.uk/leisure/musics/15503602.Model_student_Floralyn_has_many_strings_to_her_bow/</news-link>
+        </entry>
+        <entry>
+            <title>CD Review: Floralyn George - When Light Falls Asleep EP</title>
+            <thumbnail-name>album-logo.jpg</thumbnail-name>
+            <company>Entertainment South Wales</company>
+            <author>Andy Howells</author>
+            <description>Combining the sounds of harp with an ethereal vocal sound, Cornwall based singer/songwriter Floralyn George has released a haunting but dynamic EP in the shape of When Light Falls Asleep.The atmospheric track, The Burning Sea opens the EP while followed by Won’t Be Back displaying much of the magic that made early releases by Kate Bush and Tori Amos so wistfully brilliant.</description>
+            <news-link>http://www.entertainmentsouthwales.com/entertainmentsouthwales/2017/8/30/cd-review-floralyn-george-when-light-falls-asleep</news-link>
+        </entry>
+        <entry>
+            <title>Floralyn George UK tour &amp;amp; album release New EP ‘When Light Falls Asleep’ out July 30</title>
+            <thumbnail-name>pomonapr-image.jpg</thumbnail-name>
+            <company>Pomona PR</company>
+            <author>george@pomonauk.co.uk</author>
+            <description>Floralyn George is a 21 year old Alternative, Electro pop Singer/Songwriter, Harpist, Model based in the UK. Born into a family of musicians, she has been singing and playing the harp for more than 10 years. She has been performing in the United Kingdom, Macau, Hong Kong, Bulgaria, Serbia, Greece and Egypt.</description>
+            <news-link>http://www.pomonapr.com/content/wp-content/uploads/2017/07/Floralyn-George-Press-Release.pdf</news-link>
+        </entry>
+        <entry>
+            <title>Harpist aims to change lives with Macmillan fundraiser</title>
+            <thumbnail-name>newbury-observer-logo.jpg</thumbnail-name>
+            <company>Newbury Observer</company>
+            <author>Josh Cox</author>
+            <description>Bulgarian harpist Floralyn George will be performing music from her debut EP in Newbury next month, raising funds for Macmillan Cancer Support. The 21-year-old singer-songwriter, harpist and model is on tour around the country to raise money for a number of charities, and appears at the Arlington Arts Centre on September 7 at 8pm.</description>
+            <news-link>http://newburyobserver.co.uk/harpist-aims-to-change-lives-with-macmillan-fundraiser</news-link>
+        </entry>
+        <entry>
+            <title>ON STAGE: A harpist who is full of heart</title>
+            <thumbnail-name>swindon-advertiser-logo.jpg</thumbnail-name>
+            <company>Swindon Advertiser</company>
+            <author>Flicky Harrison</author>
+            <description>FLORALYN George is a musician that aims to use her talent to help others. She is currently on tour raising funds for a string of charities and will be performing at the Swindon Arts Centre, Devizes Road, Old Town on Wednesday September 6. “We want to contribute to fundraising efforts and help people with health problems, as well as environmental issues and endangered species,” said Floralyn.</description>
+            <news-link>http://www.swindonadvertiser.co.uk/news/15506415.ON_STAGE__A_harpist_who_is_full_of_heart/</news-link>
+        </entry>
+        <entry>
+            <title>Floralyn George coming to the Wyvern Theatre, Swindon</title>
+            <thumbnail-name>the-ocelot.jpg</thumbnail-name>
+            <company>The Ocelot</company>
+            <author>Staff Reporter</author>
+            <description>Singer/Songwriter, Floralyn George will be appearing in Swindon at the Wyvern Theatre on Wed 6 September. Floralyn George is a Singer/Songwriter, Harpist and model based in the UK. Born into a family of musicians, she has been singing and playing the harp for more than 10 years.</description>
+            <news-link>https://www.theocelot.co.uk/floralyn-george-coming-to-the-wyvern-theatre-swindon/</news-link>
+        </entry>
+        <entry>
+            <title>Harpist and Singer/Songwriter Launches Debut at EP Jacob's Ladder</title>
+            <thumbnail-name>london-tour-wide.jpg</thumbnail-name>
+            <company>The Falmouth Packet</company>
+            <author>Peter Johnstone</author>
+            <description>Bulgarian born, Falmouth based harpist and singer songwriter Floralyn George will take the mic at the Jacob's Ladder in Falmouth on Thursday ahead of the launch of her debut EP When Light Falls Asleep.</description>
+            <news-link>http://www.falmouthpacket.co.uk/leisure/music/15427314.Harpist_and_singer_songwriter_launches_debut_at_EP_Jacob__39_s_Ladder/</news-link>
+        </entry>
+    </news>
+</content>

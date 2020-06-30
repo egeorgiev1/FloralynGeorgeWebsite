@@ -1,0 +1,299 @@
+.header {
+  position: fixed;
+  visibility: visible;
+  top: 0;
+  z-index: 3; /* a bez tova? */
+  width: 100%; /* raboti dori i kato ima scrollbar, ne kakto sas 100vw */
+}
+
+@media screen and (max-width: 540px), screen and (max-height: 480px) {
+  .header {
+    visibility: hidden;
+  }
+}
+
+.navbar {
+  display: flex;
+  background-color: black;
+}
+
+.menu-item.navbar-logo-container {
+  display: flex;
+  overflow: hidden;
+  height: 3em;
+  padding: 0;
+}
+
+.navbar-logo {
+  height: 3em;
+  margin-right: -32px;
+  margin-top: 2px;
+}
+
+.navbar-name {
+  height: 4em;
+  margin-top: 1px;
+  margin-left: calc(1.4em - 32px);
+  margin-right: -20px;
+}
+
+/* nuzno??? */
+.separator {
+  margin: auto;
+}
+
+.menu-item { /* da go promenia na navbar item, ne na menu item */
+  color: white;
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 1em;
+}
+
+.menu-item.highlighted {
+  background-color: rgba(130, 130, 130, 0.5)
+}
+
+.menu-item:hover {
+  background-color: rgba(130, 130, 130, 0.5);
+}
+
+.menu-item:active {
+  background-color: rgba(130, 130, 130, 0.3);
+}
+
+.newsletter {
+  display: flex;
+
+  height: 40px;
+  padding-left: 1em;
+
+  background-color: white;
+  color: black;
+}
+
+.news-item {
+  margin: 0.5em 0.5em 0.5em 0em; /* size na samite elements zavisi ot tozi margin...... tova ne me kefi, ne e intuitive i shte se scupi ako se opitam da dobavia, premahna neshto */
+}
+
+/* dali samia button i textbox da zapalzvat samia bar, samo samia textbox da se stylizene kakto vav na justim timberlake website??? */
+
+.follow-button {
+  display: flex;
+  align-self: center;
+  align-items: baseline;
+  justify-content: flex-end;
+
+  position: relative;
+  /*  background-color: blue;*/
+
+  width: 133.14px; /* tova da go fixna kato napravia buttona i dropdowna da sa vav edin i sasht container i pri hover na samia container da stava dropdown animaciata */
+}
+
+.follow-button:hover {
+/*  cursor: pointer;*/
+/*  color: #039be5;*/
+}
+
+/* triabva da mu uvelicha specificityto, da vida kak da fixna tazi rabota bez da go pravia tova, moze i prosto da kaza, che tozi style niama da mi triabva, vse pak dosta hora niama da go clickat */
+.follow-container.news-item > .follow-button:active {
+  cursor: pointer;
+/*  color: #025e8d;*/
+  color: rgb(132, 71, 11);
+}
+
+.follow-button > * {
+  margin-right: 4px;
+  margin-left: 4px;
+}
+
+/* da go izkaram da ne e child na follow-button, zaradi margina i t.n. */
+.follow-dropdown {
+  position: absolute;
+  /*  top: 100%;*/
+  opacity: 0;
+  /* http://stackoverflow.com/questions/272360/does-opacity0-have-exactly-the-same-effect-as-visibilityhidden */
+  /* moze bi moze i sas pointer-events: none; i opacity: 0; ?! */
+  visibility: hidden;
+  /*  top: -30px;*/
+  top: 0;
+  right: 0;
+  display: flex;
+  /*  display: none;*/
+  flex-direction: column;
+  /*  padding: 1em 1em 0 1em;*/
+  background-color: white;
+  /*  padding: 0.5em;*/
+  /*
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 2px;
+
+  margin: 0; /* tova da go mahna */
+
+  transition: 0.3s;
+}
+
+.follow-dropdown > * {
+  display: flex;
+  align-items: baseline;
+  text-decoration: none;
+  /*  padding-bottom: 1em;*/
+  /*  padding: 0.5em;*/
+  padding: 0.5em 1em;
+  color: black;
+  text-emphasis: bold;
+}
+
+.follow-dropdown > *:hover {
+  /*  color: #039be5;*/
+  background-color: lightgray;
+}
+
+.follow-dropdown > *:active {
+  /*  color: #039be5;*/
+  transition: 0s;
+  background-color: gray;
+}
+
+.follow-container {
+  display: flex;
+  position: relative;
+  cursor: pointer;  
+}
+
+.follow-container:hover > .follow-button {
+  cursor: pointer;
+/*  color: #039be5;*/
+  color: rgb(236, 128, 19);
+}
+
+/* focus za tablet */
+/*.follow-container:hover > .follow-dropdown,*/
+.follow-container:focus > .follow-dropdown
+{
+  visibility: visible;
+  top: 100%;
+  transition: 0.3s;
+  opacity: 1;
+  /* zashto ne transitionva?! */
+}
+
+/* tova da ne mi e nuzno natatuka!!! sashto tova ima specificity problemi?! */
+.follow-dropdown .fa.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+
+  text-decoration: none;
+}
+
+.newsletter > form {
+  display: flex;
+}
+
+input[type=text] {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid black;
+  width: 184px;
+
+  font-size: 13.3333px;
+}
+
+input[type=submit] { /* da mu izmisla class, signup-button? */
+  border: black;
+  background-color: rgb(200, 200, 200);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+
+  cursor: pointer;
+  border-radius: 2px;
+  transition: 0.3s; /* specify kakvo tochno da transitionva */
+  font-size: 13.3333px; /* 0.83em? */
+}
+
+input[type=submit]:hover {
+  background-color: white; /* drug color? */
+/*  background-color: #039be5;*/
+  background-color: rgb(236, 128, 19);
+}
+
+input[type=submit]:active {
+  /*  background-color: rgb(150, 150, 150);*/
+/*  background-color: #025e8d;*/
+  background-color: rgb(132, 71, 11);
+  transition-duration: 0s;
+}
+
+/* fix hover varhu samite icons vav samia follow
+dropdown da ne triggerva samia background change */
+.follow-dropdown .fa-facebook {
+  background-color: #295396;
+  color: white;
+}
+
+.follow-dropdown .fa-twitter {
+  background-color: #55acee;
+  color: white;
+}
+
+.follow-dropdown .fa-instagram {
+  background: radial-gradient(circle at 33% 100%, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF);
+  color: white;
+}
+
+.follow-dropdown .fa-youtube-play {
+  background-color: #e62117;
+  color: white;
+}
+
+.follow-dropdown .fa-soundcloud {
+  background-color: rgb(253, 114, 31);
+  color: white;
+  /* da centriram samia icon po-dobre??? */
+}
+
+
+.follow-dropdown .fa-spotify {
+/*  background-color: white;*/
+/*  background-color: black;*/
+  /*  color: white;*/
+/*  filter: invert(100%);*/
+  background-color: white;
+/*  color: white;*/
+/*  color: white;*/
+  font-size: 30px;
+}
+
+.follow-dropdown .fa-spotify > * {
+/*  filter: invert(100%);*/
+}
+
+.follow-dropdown > * {
+/*  display: flex;*/
+  align-items: center;
+}
+
+.loading-indicator {
+    transition: 0.3s;
+    transform: scale(0.5, 0.5);
+    opacity: 0;
+    color: white;
+}
+
+.loading-indicator.visible {
+    transform: scale(1, 1);
+    opacity: 1;
+}
+
+.loading-indicator.mobile {
+    position: relative;
+    top: -2.39rem;
+    left: 60px;
+}

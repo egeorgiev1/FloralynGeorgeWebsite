@@ -1,0 +1,109 @@
+.content-actions {
+  display: flex;
+}
+/* otslabvane na samia shadow??? */
+.transparent-button {
+  display: flex;
+  align-items: center;
+  padding: 0.4em 0.5em;
+  margin-top: 1.5em;
+
+  border: 2px solid white;
+  border-radius: 4px; /* dali da go ima? */
+  background-color: transparent; /* dali tova? sinio? */
+  color: white;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.49);
+  /* text shadow??? */
+}
+
+.transparent-button:hover {
+  cursor: pointer;
+  background-color: rgba(150, 150, 150, 0.3);
+}
+
+.transparent-button:active {
+  background-color: rgba(50, 50, 50, 0.3);
+}
+
+.transparent-button .label {
+  margin-left: 0.45rem;
+  font-size: 1.2em;
+
+  display: flex;
+  align-items: center;
+}
+
+.transparent-button.play-button {
+  /*
+  border-color: hsl(120, 100%, 70%);;
+  color: hsl(120, 100%, 70%);
+  */
+  /*  background-color: hsla(120, 50%, 50%, 0.2);*/
+}
+
+.transparent-button.play-button:hover {
+  /*  background-color: hsla(120, 50%, 50%, 0.5);*/
+}
+
+.transparent-button.play-button:active {
+  /*  background-color: hsla(120, 50%, 50%, 0.2);*/
+}
+
+.transparent-button.buy-button {
+  margin-left: 1em;
+
+  /*
+  border-color: hsl(60, 100%, 70%);
+  color: hsl(60, 100%, 70%);
+  */
+  /*  background-color: hsla(60, 50%, 50%, 0.2);*/
+  background-color: rgba(236, 128, 19, 0.3);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.49);
+}
+
+.transparent-button.buy-button:hover {
+  /*  background-color: hsla(60, 50%, 50%, 0.5);*/
+  background-color: rgba(236, 128, 19, 0.6);
+}
+
+.transparent-button.buy-button:active {
+  /*  background-color: hsla(60, 50%, 50%, 0.2);*/
+  background-color: rgba(236, 128, 19, 0.3);
+}
+
+.album-image {
+  height: 200px;
+  width: 200px;
+/*  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.49);*/
+}
+
+/* http://stackoverflow.com/questions/31713468/css-blur-filter-performance */
+.top-content .bg-image {
+  /* vmesto tezi neka se izpolzvat veche filtered images!!! */
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
+  transform: translate3d(0,0,0);
+  transform: translateZ(0);
+  
+/*  filter: brightness(30%) blur(10px); */
+}
+
+.album-name {
+  margin-top: 1rem;
+  font-size: 1.375em;
+}
+
+.content-message {
+  /*  margin-top: 1em;*/
+  margin-top: 0.3rem;
+  font-size: 1.125em;
+}
+
+.button-link {
+    text-decoration: none;
+}

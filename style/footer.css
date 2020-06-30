@@ -1,0 +1,188 @@
+/* na footera da mu dam transparent designa kakto na samite e
+/* footer */
+.footer {
+  position: relative;
+  padding: 1em;
+  background-color: black;
+  color: white;
+  /* EXPERIMENTAL */
+/*  border-top: 1px solid rgb(50, 50, 50);*/
+  border-top: 1px solid gray; /* za mobile pone izglezda dobre, ne tolkova mai za desktop? */
+}
+
+.nav-footer {
+  display: flex;
+  align-items: center;
+  /*  flex-direction: column;*/
+}
+
+/* namalavane na samite divs!!!, sign up color button da vida sin i white text */
+
+.footer .fa.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1em;
+
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+
+  text-decoration: none;
+  background-color: rgb(150, 150, 150);
+  color: black;
+}
+
+.footer .fa.social-icon:hover {
+  /* moze i da e tozi sin cviat, koito izpolzvam za Follow??? */
+  /*  background-color: rgb(200, 200, 200); */
+
+  /*  background-color: #039be5;*/
+  background-color: rgb(236, 128, 19);
+}
+
+.footer .fa.social-icon:active {
+  /* moze i da e tozi sin cviat, koito izpolzvam za Follow??? */
+  /*  background-color: rgb(200, 200, 200); */
+  
+/*  background-color: #025e8d;*/
+  background-color: rgb(132, 71, 11);
+}
+
+
+.nav-footer-item {
+  margin-left: 1em;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-footer-item:hover {
+/*  color: #039be5;*/
+  color: rgb(236, 128, 19);
+}
+
+.nav-footer-item:active {
+/*  color: #025e8d;*/
+  color: rgb(132, 71, 11);
+}
+
+.copyright-section {
+  font-size: 0.7em;
+  text-align: justify; /* taka?! dostatuchno e malak i ima dostatuchno mnogo words, za da proraboti dobre?! ili i vse pak da ne go pravia, ne izliza pak napalno dobre???*/
+}
+
+.copyright-section > p {
+  padding-top: 1.428em; /* gore-dolu kolkoto 1em spriamo root em(tova e zaradi font-size: 0.7em, da go refactorna na rem tuka? */
+}
+
+
+.footer-social-buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer .social-row {
+  display: flex;
+  flex-direction: row;
+}
+
+/* za gore triabva da napravia napalno nov element, koito da go kria i
+pokazvam ?! */
+@media screen and (max-width: 540px) {
+  .footer .fa.social-icon {
+    /*    margin-right: 0;*/
+
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-bottom: 1em;
+    height: 35px;
+    width: 35px;
+
+    /* fa-lg */
+    font-size: 1.33333333em;
+    line-height: .75em;
+    vertical-align: -15%;
+    transition: 0.3s;
+  }
+
+  .footer .fa.social-icon:active {
+    transition: 0s;
+  }
+
+  .nav-footer {
+    flex-direction: column;
+  }
+
+  .nav-footer-item {
+    margin-left: 0px;
+    /*
+    margin-bottom: 1em;
+    margin-top: 1em;
+    */
+    padding: 1em;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-footer-item:active {
+    background-color: rgba(130, 130, 130, 0.3);
+    transition: 0s;
+  }
+
+  .copyright-section > p {
+    text-align: center;
+  }
+
+  .header {
+    display: none;
+  }
+
+  input[type=text] {
+    text-align: center;
+  }
+}
+
+/* use flexbox to make elements stack vav footera, prosto da smenia flex directiona?! da ia vida taia rabota */
+
+/* da gi izpolzvam tezi styles i na samite buttons vav footera? izglezdashe mnogo interesno kato sluchaino gi applynah na tiah!!!, privlichat vnimanie sas cvetovete!!! */
+
+.dev:hover {
+  color: 
+}
+
+.footer-emails {
+    /* compensate for the border-spacing */
+    margin-top: calc(1.428em - 0.2em);
+    margin-bottom: -0.2em;
+    border-collapse: separate;
+    border-spacing: 0 0.2em;
+}
+
+.footer-emails td:nth-child(2) {
+    padding-left: 0.5em;
+}
+
+.footer-emails td {
+    text-align: left;
+}
+
+
+@media screen and (max-width: 540px) {
+    .footer-emails {
+        margin: 0;
+        font-size: 0.9rem !important;
+    }
+    
+    .footer-emails, .footer-emails tr {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-emails tr {
+        margin: 1em;
+    }
+}
